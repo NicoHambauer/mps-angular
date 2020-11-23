@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mps-ang": {
+      "hosting": {
+        "mps-angular": [
+          "mps-ang"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mps-ang"
+  }
+}
