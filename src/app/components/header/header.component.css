@@ -1,7 +1,7 @@
 .header{
     width: 100%;
     background-color: #35b86e;
-    border-bottom:1px solid black ;
+    border-bottom:1px solid rgb(255, 255, 255) ;
     text-align: center;
     padding: 30px;
 }
