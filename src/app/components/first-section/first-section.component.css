@@ -1,3 +1,8 @@
 .container{
-    background-color: #2E8B57;
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+    background: #2e8b57;
 }
