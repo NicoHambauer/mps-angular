@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 </head>
 <body>
   <app-root></app-root>
@@ -58,29 +58,31 @@
     let massPopChart = new Chart(myChart, {
       type: 'bar', 
       data: {
-        // labels:['Dein Verbrauch'],
+        label:'Dein Verbrauch',
         datasets:[{
-          label:'CO2',
+          label:'CO2 Verbrauch',
           data:[
-            meinVerbrauch,
-            
+            meinVerbrauch
+          
           ],
           backgroundColor: color,
           borderWidth:1,
           borderColor: 'black',
           hoverBorderWidth:3,
           hoverBorderColor: 'black',
+          
+          
 
         }]
       },
       options: {
         title:{
           display:true,
-          text: 'Dein Verbrauch',
+          text: 'Deine CO2 Bilanz',
           fontSize:25
         },
         legend:{
-          display:true,
+          display:false,
           position:'right',
           labels: {
             fontColor: 'grey'
@@ -95,7 +97,12 @@
           }
         },
         tooltips:{
-          enabled:true
+          enabled:true,
+          callbacks: {
+          title: () => null,
+          }
+          
+          
         },
         scales: {
           yAxes: [{
