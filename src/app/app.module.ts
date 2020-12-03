@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LoginButtonComponent,
     FirstSectionComponent,
     SecondSectionComponent,
+    NavbarComponent
 
   ],
   imports: [

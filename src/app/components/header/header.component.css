@@ -67,6 +67,10 @@ min-height: 100%;
 }
 .header-content p{
     font-size: 1.5rem;
-    
+    padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+svg {
+    margin: auto;
 }

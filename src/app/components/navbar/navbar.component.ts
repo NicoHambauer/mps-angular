@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 
 /*window.onscroll = function() {scrollFunction()};
@@ -16,7 +16,5 @@ function scrollFunction() {
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent {}
 
-
-}
