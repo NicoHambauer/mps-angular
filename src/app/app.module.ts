@@ -8,6 +8,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
 import { FirstSectionComponent } from './components/first-section/first-section.component';
 import { SecondSectionComponent } from './components/sections/second-section/second-section.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SecondSectionComponent } from './components/sections/second-section/sec
     LogoComponent,
     LoginButtonComponent,
     FirstSectionComponent,
-    SecondSectionComponent
+    SecondSectionComponent,
+
   ],
   imports: [
     BrowserModule,
