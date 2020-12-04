@@ -67,6 +67,16 @@ min-height: 100%;
 }
 .header-content p{
     font-size: 1.5rem;
-    
+    padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+
+a {
+    margin: auto;
+    color: white;
+}
+
+a:hover {
+    color:  rgb(46, 139, 87);
 }
