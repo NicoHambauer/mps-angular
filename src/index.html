@@ -7,54 +7,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 </head>
 <body>
   <app-root></app-root>
   <div class = "container"> 
     <canvas id="myChart"></canvas>
   </div>
+   
   <script>
+    let meinVerbrauch;
+    let overshootGoal;
+    let color;
+
+    //testWerte
+    meinVerbrauch = 100;
+    overshootGoal = 200;
+
+
+
     let myChart = document.getElementById('myChart').getContext('2d');
+
+    if (meinVerbrauch > overshootGoal) {
+            color = 'red'
+          }
+          else {
+            color = 'green'
+          }
+
+    function addVerbrauch(verbrauch) {
+      meinVerbrauch = meinVerbrauch + verbrauch
+    }
+
+    function substractVerbrauch(verbrauch) {
+      meinVerbrauch = meinVerbrauch - verbrauch
+
+      if (meinVerbrauch < 0) {
+        meinVerbrauch = 0
+      }
+    }
 
     //Global Options
     Chart.defaults.global.defaultFontFamily = 'Arial';
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = 'grey'
+    
 
-    let massPopChart = new Chart(myChart, {
+
+
+    let CO2Tracker = new Chart(myChart, {
       type: 'bar', 
       data: {
-        labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+        label:'Dein Verbrauch',
         datasets:[{
-          label:'Population',
+          label:'CO2 Verbrauch',
           data:[
-            617594,
-            181045,
-            153060,
-            106519,
-            105162,
-            95072
+            meinVerbrauch
+          
           ],
-          //backgroundColor: 'green'
-          backgroundColor: [
-            'green', 'yellow', 'orange', 'red', 'grey' , 'blue' , 'brown'
-          ],
+          backgroundColor: color,
           borderWidth:1,
           borderColor: 'black',
           hoverBorderWidth:3,
-          hoverBorderColor: 'black'
+          hoverBorderColor: 'black',
+          
+          
 
         }]
       },
       options: {
         title:{
           display:true,
-          text: 'Largest Cities in Massachusetts',
+          text: 'Deine CO2 Bilanz',
           fontSize:25
         },
         legend:{
-          display:true,
+          display:false,
           position:'right',
           labels: {
             fontColor: 'grey'
@@ -69,7 +97,22 @@
           }
         },
         tooltips:{
-          enabled:true
+          enabled:true,
+          callbacks: {
+          title: () => null,
+          }
+          
+          
+        },
+        scales: {
+          yAxes: [{
+            display: true,
+            ticks: {
+                beginAtZero: true,
+                max: meinVerbrauch * 1.4
+
+            }
+        }]
         }
       }
     });
