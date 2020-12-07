@@ -14,36 +14,58 @@
   <div class = "container"> 
     <canvas id="myChart"></canvas>
   </div>
+
+  
    
   <script>
-    let meinVerbrauch;
+
+    
+
+    //Variablen
+    let meinVerbrauch = [];
     let overshootGoal;
-    let color;
+    let color = [];
 
     //testWerte
-    meinVerbrauch = 100;
+    meinVerbrauch.push(130);
+    meinVerbrauch.push(150);
+    meinVerbrauch.push(210);
     overshootGoal = 200;
 
+    
 
 
-    let myChart = document.getElementById('myChart').getContext('2d');
 
-    if (meinVerbrauch > overshootGoal) {
-            color = 'red'
+  let myChart = document.getElementById('myChart').getContext('2d');
+
+  //ordnet je nach Verbrauch dem Balken rot oder grün als Farbe zu
+  for (i=0; i < meinVerbrauch.length; i++) {
+    if (meinVerbrauch[i] > overshootGoal) {
+            temp = 'red'
+            color.push(temp)
           }
           else {
-            color = 'green'
+            temp = 'green'
+            color.push(temp)
           }
-
-    function addVerbrauch(verbrauch) {
-      meinVerbrauch = meinVerbrauch + verbrauch
+        }
+    
+    // platzhalterfunktionen
+    function addVerbrauch(index, verbrauch) {
+      meinVerbrauch[index] = meinVerbrauch[index] + verbrauch
     }
 
-    function substractVerbrauch(verbrauch) {
-      meinVerbrauch = meinVerbrauch - verbrauch
+    function addDay() {
+      meinVerbrauch.push(0)
+    }
 
-      if (meinVerbrauch < 0) {
-        meinVerbrauch = 0
+    function substractVerbrauch(index, verbrauch) {
+      meinVerbrauch[index] = meinVerbrauch[index] - verbrauch
+
+
+      //damit Verbrauch nicht negativ wird
+      if (meinVerbrauch[index] < 0) {
+        meinVerbrauch[index] = 0
       }
     }
 
@@ -55,16 +77,18 @@
 
 
 
-    let CO2Tracker = new Chart(myChart, {
+
+   let CO2Tracker = new Chart(myChart, {
       type: 'bar', 
       data: {
-        label:'Dein Verbrauch',
+        labels: meinVerbrauch,
         datasets:[{
-          label:'CO2 Verbrauch',
-          data:[
+          //label:'CO2 Verbrauch',
+          data:
             meinVerbrauch
+
           
-          ],
+          ,
           backgroundColor: color,
           borderWidth:1,
           borderColor: 'black',
@@ -109,13 +133,13 @@
             display: true,
             ticks: {
                 beginAtZero: true,
-                max: meinVerbrauch * 1.4
+                max: Math.max(meinVerbrauch)
 
             }
         }]
         }
       }
-    });
+    }); 
   </script>
 </body>
 </html>
