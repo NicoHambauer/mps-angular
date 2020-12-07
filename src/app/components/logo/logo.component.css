@@ -1,9 +1,9 @@
 .logo {
-    width: 30vw;
-    height: 30vw;
+    width: 15vw;
+    height: 15vw;
     margin: auto;
     text-align: center;
     border-radius: 100%;
     background: rgb(46, 139, 87);
-    padding-top: 15vw;
+    padding-top: 7vw;
 }
