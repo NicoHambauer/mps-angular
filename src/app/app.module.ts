@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { LoginButtonComponent } from './components/login-button/login-button.com
 import { FirstSectionComponent } from './components/first-section/first-section.component';
 import { SecondSectionComponent } from './components/sections/second-section/second-section.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { GraphComponent } from './components/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LoginButtonComponent,
     FirstSectionComponent,
     SecondSectionComponent,
-    NavbarComponent
+    NavbarComponent,
+    GraphComponent
 
   ],
   imports: [
