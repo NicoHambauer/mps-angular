@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>MpsAngular</title>
@@ -7,49 +8,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
   <app-root></app-root>
-  <div class = "container"> 
+  <div class="container">
     <canvas id="myChart"></canvas>
   </div>
 
-  
-   
+
+
   <script>
-
-    
-
     //Variablen
-    let meinVerbrauch = [];
-    let overshootGoal;
-    let color = [];
+    var meinVerbrauch = [];
+    var overshootGoal;
+    var color;
 
     //testWerte
     meinVerbrauch.push(130);
     meinVerbrauch.push(150);
     meinVerbrauch.push(210);
+    meinVerbrauch.push(150);
+    meinVerbrauch.push(150);
+    meinVerbrauch.push(150);
     overshootGoal = 200;
 
-    
+    var myChart = document.getElementById('myChart'); //.getContext('2d');
 
-
-
-  let myChart = document.getElementById('myChart').getContext('2d');
-
-  //ordnet je nach Verbrauch dem Balken rot oder grün als Farbe zu
-  for (i=0; i < meinVerbrauch.length; i++) {
-    if (meinVerbrauch[i] > overshootGoal) {
-            temp = 'red'
-            color.push(temp)
-          }
-          else {
-            temp = 'green'
-            color.push(temp)
-          }
+    function getColor() {
+      color = []
+      //ordnet je nach Verbrauch dem Balken rot oder grün als Farbe zu
+      for (i = 0; i < meinVerbrauch.length; i++) {
+        if (meinVerbrauch[i] > overshootGoal) {
+          temp = 'red'
+          color.push(temp)
+        } else {
+          temp = 'green'
+          color.push(temp)
         }
-    
+      }
+    }
+
     // platzhalterfunktionen
     function addVerbrauch(index, verbrauch) {
       meinVerbrauch[index] = meinVerbrauch[index] + verbrauch
@@ -61,8 +61,6 @@
 
     function substractVerbrauch(index, verbrauch) {
       meinVerbrauch[index] = meinVerbrauch[index] - verbrauch
-
-
       //damit Verbrauch nicht negativ wird
       if (meinVerbrauch[index] < 0) {
         meinVerbrauch[index] = 0
@@ -75,71 +73,60 @@
     Chart.defaults.global.defaultFontColor = 'grey'
     
 
-
-
-
-   let CO2Tracker = new Chart(myChart, {
-      type: 'bar', 
+    var CO2Tracker = new Chart(myChart, {
+      type: 'bar',
       data: {
         labels: meinVerbrauch,
-        datasets:[{
-          //label:'CO2 Verbrauch',
-          data:
-            meinVerbrauch
-
-          
-          ,
-          backgroundColor: color,
-          borderWidth:1,
-          borderColor: 'black',
-          hoverBorderWidth:3,
-          hoverBorderColor: 'black',
-          
-          
-
+        datasets: [{
+            label: 'CO2 Verbrauch',
+            data: meinVerbrauch,
+            backgroundColor: color,
+            borderColor: 'black',
+            borderWidth: 1,
+            hoverBorderWidth: 3,
+            hoverBorderColor: 'black',
         }]
       },
       options: {
-        title:{
-          display:true,
+        title: {
+          display: true,
           text: 'Deine CO2 Bilanz',
-          fontSize:25
+          fontSize: 25
         },
-        legend:{
-          display:false,
-          position:'right',
+        legend: {
+          display: false,
+          position: 'right',
           labels: {
             fontColor: 'grey'
           }
         },
         layout: {
-          padding:{
-            left:50,
-            right:0,
-            bottome:0,
-            top:0
+          padding: {
+            left: 50,
+            right: 0,
+            bottome: 0,
+            top: 0
           }
         },
-        tooltips:{
-          enabled:true,
+        tooltips: {
+          enabled: true,
           callbacks: {
-          title: () => null,
+            title: () => null,
           }
-          
-          
+
+
         },
         scales: {
           yAxes: [{
             display: true,
             ticks: {
-                beginAtZero: true,
-                max: Math.max(meinVerbrauch)
-
+              beginAtZero: true,
             }
-        }]
+          }]
         }
       }
     }); 
   </script>
 </body>
+
 </html>
