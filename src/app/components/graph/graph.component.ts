@@ -23,18 +23,19 @@ export class GraphComponent implements OnInit {
     
     this.overshootGoal = 200
     this.color = []
+    this.getColor();
   }
 
   ngOnInit(): void {
   
+    //nicht mehr benötigt, da npm install chart.js ausgeführt wurde
     //<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
-    //Variablen
-    var color;
 
     //Global Options
     Chart.defaults.global.defaultFontFamily = 'Arial';
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = 'grey'
+    
     
 
     var CO2Tracker = new Chart("myChart", {
@@ -44,7 +45,7 @@ export class GraphComponent implements OnInit {
         datasets: [{
             label: 'CO2 Verbrauch',
             data: this.meinVerbrauch,
-            backgroundColor: color,
+            backgroundColor: this.color,
             borderColor: 'black',
             borderWidth: 1,
             hoverBorderWidth: 3,
