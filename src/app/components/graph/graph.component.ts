@@ -8,6 +8,7 @@ import { Chart } from 'chart.js';
 })
 export class GraphComponent implements OnInit {
   meinVerbrauch:number[];
+  timeInterval:string[];
   overshootGoal:number;
   color:string[];
 
@@ -20,7 +21,10 @@ export class GraphComponent implements OnInit {
     this.meinVerbrauch.push(150);
     this.meinVerbrauch.push(150);
     this.meinVerbrauch.push(150);
+    this.meinVerbrauch.push(210);
     
+    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+
     this.overshootGoal = 200
     this.color = []
     this.getColor();
@@ -41,7 +45,7 @@ export class GraphComponent implements OnInit {
     var CO2Tracker = new Chart("myChart", {
       type: 'bar',
       data: {
-        labels: this.meinVerbrauch,
+        labels: this.timeInterval,
         datasets: [{
             label: 'CO2 Verbrauch',
             data: this.meinVerbrauch,
