@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'node_modules/chart.js';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-graph',
@@ -68,14 +68,14 @@ export class GraphComponent implements OnInit {
           padding: {
             left: 50,
             right: 0,
-            bottome: 0,
+            bottom: 0,
             top: 0
           }
         },
         tooltips: {
           enabled: true,
           callbacks: {
-            title: () => null,
+            title: () => '',
           }
 
 
