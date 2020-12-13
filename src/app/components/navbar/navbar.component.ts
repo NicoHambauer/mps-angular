@@ -16,5 +16,23 @@ function scrollFunction() {
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {}
+export class NavbarComponent implements OnInit {
+  
+  constructor(){
+
+  }
+
+  ngOnInit():void {
+    window.addEventListener('wheel', function() {
+      let navbar = document.getElementById('navbar').style;
+      if(navbar != null){
+        navbar.display = "none";
+      }
+      
+      if(navbar != null){
+        navbar.display = "";
+      }
+    });
+  }
+}
 
