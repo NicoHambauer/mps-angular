@@ -13,11 +13,17 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#second-section">Tracker</a> <!-- second section is assigned as an id in second-sectionn-html -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Tracker</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="#">Learn more</a>
+      </li>
+      <li class="nav-item active">
+        <a [routerLink]="['/first-section']" routerLinkActive="router-link-active"  class="nav-link">Section 1</a>
+      </li>
+      <li class="nav-item active">
+        <a [routerLink]="['/second-section']" routerLinkActive="router-link-active"  class="nav-link">Section 2</a>
       </li>
     </ul>
   </div>

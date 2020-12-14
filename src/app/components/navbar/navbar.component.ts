@@ -16,6 +16,7 @@ function scrollFunction() {
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
   
   constructor(){
@@ -35,4 +36,5 @@ export class NavbarComponent implements OnInit {
     });
   }
 }
+
 
