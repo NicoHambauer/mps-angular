@@ -25,6 +25,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit():void {
     window.addEventListener('wheel', function() {
+      /*
       let navbar = document.getElementById('navbar').style;
       if(navbar != null){
         navbar.display = "none";
@@ -33,6 +34,7 @@ export class NavbarComponent implements OnInit {
       if(navbar != null){
         navbar.display = "";
       }
+      */
     });
   }
 }
