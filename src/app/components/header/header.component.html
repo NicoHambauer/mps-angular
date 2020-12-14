@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-
-
-<header class="v-header container">
-  <div class="fullscreen-video-wrap">
-      <video src="../../../assets/Forest.mp4" autoplay="true" loop="true"></video>
-  </div>
-  <div class="header-overlay"></div>
-  <div class="header-content">
+<div>
+  <app-navbar></app-navbar>
+  <div>
+    <video autoplay="true" loop="true">
       <h1>Co2counter<br>Keep the world alive_</h1>
       <p>lets track your consumption</p>
-      <a [routerLink]="['/sections/first-section']" routerLinkActive="router-link-active" >
-        <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-          <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
-      </a>
+      <source src="../../../assets/Forest.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <a [routerLink]="['/sections/first-section']" routerLinkActive="router-link-active" >
+      <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </a>
   </div>
-</header>
+</div>
+
 
