@@ -9,6 +9,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 }
 
 video {
@@ -21,6 +22,7 @@ video {
     position:absolute;
     
 }
+
 .video-filter {
     width: inherit;
     height: inherit;
@@ -29,6 +31,7 @@ video {
 
 .video-text{
     text-align: center;
+    color: rgb(46, 139, 87);
 }
 
 
@@ -39,8 +42,9 @@ h1 {
 
 p {
     font-size: 1.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0px;
 }
 
 a {
