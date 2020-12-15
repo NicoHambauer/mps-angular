@@ -1,9 +1,14 @@
 .container-first-section{
     width: 100vw;
+    height: 100%;
     margin: 0px 0px 0px 0px;
     padding-left: 0rem;
     padding-right: 0rem;
     text-align: center;
     color: whitesmoke;
     background: #6e6e6e;
+}
+
+#first-section {
+    min-height: 100%;
 }
