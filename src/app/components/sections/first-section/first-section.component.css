@@ -1,8 +1,9 @@
-.container{
-    max-width: 960px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: auto;
+.container-first-section{
+    width: 100vw;
+    margin: 0px 0px 0px 0px;
+    padding-left: 0rem;
+    padding-right: 0rem;
     text-align: center;
+    color: whitesmoke;
     background: #6e6e6e;
 }
