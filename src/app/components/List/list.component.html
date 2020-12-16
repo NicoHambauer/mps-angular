@@ -1,0 +1,96 @@
+<html>
+<style>
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 1px solid #cccccc;
+        padding: 8px;
+    }
+
+    th {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd
+    }
+
+    tr:hover {
+        background-color: black;
+        color: white;
+    }
+  
+</style>
+<script>
+    let sortDirection = false;
+
+    //Testdaten
+    let tableData = [
+        {item: 'Autofahrt', verbrauch: 100  },
+        {item: 'Heizung', verbrauch: 20 },
+        {item: 'Gas', verbrauch: 50 }
+    ];
+
+    window.onload = () => {
+        loadTableData(tableData);
+    };
+
+    //loadTableData(tableData);
+
+    function loadTableData(tableData) {
+        const tableBody = document.getElementById('tableData');
+        let dataHtml = '';
+
+        for (let data of tableData) {
+            dataHtml += `<tr><td>${data.item}</td><td>${data.verbrauch}</td></tr>`;
+        }
+        
+
+        tableBody.innerHTML = dataHtml;
+    }
+
+    function sortColumn(columnName) {
+        const dataType = typeof tableData[0][columnName];
+        sortDirection = !sortDirection;
+
+        switch(dataType) {
+            case 'number':
+            sortNumberColumn(sortDirection, columnName);
+            break;
+        }
+
+        loadTableData(tableData);
+    }
+
+    function sortNumberColumn(sort, columnName) {
+        tableData = tableData.sort((p1, p2) => {
+            return sort ? p1[ColumnName] - p2[columnName] : p2[ColumnName] - p1[columnName]
+        });
+    }
+
+</script>
+<body>
+    <table>
+     <thread>
+
+        <tr>
+            <th>Item</th>
+            <th onclick="sortColumn('verbrauch')">Verbrauch</th>
+
+        </tr>
+      </thread>
+
+
+      <tbody id="tableData"></tbody>
+
+    
+
+    </table>
+    
+</body>
+</html>
