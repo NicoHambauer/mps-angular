@@ -36,16 +36,16 @@ video {
 
 
 h1 {
-    padding-top: 3rem;
-    font-size: 3rem;
+    padding-top: 20%;
+    font-size: 250%;
     margin-bottom: 0;
     color: white;
 }
 
 p {
-    font-size: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    font-size: 150%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-bottom: 0px;
     color: white;
 }
