@@ -1,6 +1,18 @@
 <div class="third-section">
-    <mat-tab-group dynamicHeight mat-align-tabs="center" animationDuration="0ms">
-        <mat-tab label="Graph"><app-graph></app-graph></mat-tab>
-        <mat-tab label="List">Content 2</mat-tab>
-      </mat-tab-group>
+
+  <app-header></app-header>
+
+  <mat-tab-group mat-align-tabs="center" color= "accent">
+        <mat-tab label="Graph">
+          <div id="content">
+            Graph
+          </div>
+        </mat-tab>
+        <mat-tab label="List">
+          <div id="content">
+            List
+          </div>
+        </mat-tab>
+  </mat-tab-group>
+
 </div>
