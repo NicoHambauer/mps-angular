@@ -17,6 +17,7 @@ import { FirstSectionComponent } from './components/sections/first-section/first
 import { SecondSectionComponent } from './components/sections/second-section/second-section.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,8 @@ import { GraphComponent } from './components/graph/graph.component';
     FirstSectionComponent,
     SecondSectionComponent,
     NavbarComponent,
-    GraphComponent
-
+    GraphComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
