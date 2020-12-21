@@ -1,18 +1,22 @@
-
-
 <table>
      <thead>
-
-        <tr>
-            <th>Item</th>
-            <th onclick="sortColumn('verbrauch')">Verbrauch</th>
-            <th>Datum</th>
-
-        </tr>
-      </thead>
-
-
-      <tbody id="tableData"></tbody>
-    
-
-    </table>
+      <tr>
+        <th>Item</th>
+        <th onclick="sortColumn('verbrauch')">Verbrauch</th>
+        <th>Datum</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let dataItem of tableData">
+      <tr> 
+        <td>
+          {{ dataItem.item }} 
+        </td>
+        <td>
+          {{ dataItem.verbrauch}}
+        </td>
+        <td>
+          {{ dataItem.datum}}
+        </td>
+      </tr>
+    </tbody>
+</table>
