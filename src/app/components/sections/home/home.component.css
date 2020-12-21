@@ -1,6 +1,6 @@
 .header-container{
     width: 100vw;
-    height: 40vh;
+    height: 100vh;
 }
 
 .video-container{
@@ -36,16 +36,16 @@ video {
 
 
 h1 {
-    padding-top: 20%;
-    font-size: 250%;
+    padding-top: 3rem;
+    font-size: 3rem;
     margin-bottom: 0;
     color: white;
 }
 
 p {
-    font-size: 150%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-bottom: 0px;
     color: white;
 }
