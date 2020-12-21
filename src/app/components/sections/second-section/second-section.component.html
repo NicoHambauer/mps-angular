@@ -2,15 +2,15 @@
     <app-header></app-header>
 
   <mat-tab-group mat-align-tabs="center" color= "accent" backgroundColor= "primary">
-        <mat-tab label="Graph">
-          <div id="content">
-            <app-graph></app-graph>
-          </div>
-        </mat-tab>
-        <mat-tab label="List">
-          <div id="content">
-            <app-table></app-table>
-          </div>
-        </mat-tab>
+    <mat-tab label="Graph">
+      <ng-template matTabContent>
+        <app-graph></app-graph>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="List">
+      <div id="content">
+        <app-table></app-table>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>
