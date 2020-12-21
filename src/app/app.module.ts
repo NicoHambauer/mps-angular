@@ -21,6 +21,8 @@ import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThirdSectionComponent } from './components/sections/third-section/third-section.component';
 import { HomeComponent } from './components/sections/home/home.component';
+import { TableComponent } from './components/table/table.component';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +35,8 @@ import { HomeComponent } from './components/sections/home/home.component';
     NavbarComponent,
     GraphComponent,
     ThirdSectionComponent,
-    HomeComponent
-
+    HomeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
