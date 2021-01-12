@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ThirdSectionComponent } from './third-section.component';
 
-describe('ThirdSectionComponent', () => {
-  let component: ThirdSectionComponent;
-  let fixture: ComponentFixture<ThirdSectionComponent>;
+import { ClimaFactsComponent } from './clima-facts.component';
+
+describe('ClimaFactsComponent', () => {
+  let component: ClimaFactsComponent;
+  let fixture: ComponentFixture<ClimaFactsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThirdSectionComponent ]
+      declarations: [ ClimaFactsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThirdSectionComponent);
+    fixture = TestBed.createComponent(ClimaFactsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

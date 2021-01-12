@@ -19,9 +19,9 @@ import { SecondSectionComponent } from './components/sections/second-section/sec
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThirdSectionComponent } from './components/sections/third-section/third-section.component';
 import { HomeComponent } from './components/sections/home/home.component';
 import { TableComponent } from './components/table/table.component';
+import { ClimaFactsComponent } from './components/sections/clima-facts/clima-facts.component';
 
 
 @NgModule({
@@ -34,9 +34,9 @@ import { TableComponent } from './components/table/table.component';
     SecondSectionComponent,
     NavbarComponent,
     GraphComponent,
-    ThirdSectionComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    ClimaFactsComponent
   ],
   imports: [
     BrowserModule,
