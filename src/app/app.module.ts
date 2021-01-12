@@ -22,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/sections/home/home.component';
 import { TableComponent } from './components/table/table.component';
 import { ClimaFactsComponent } from './components/sections/clima-facts/clima-facts.component';
+import { ReduceC02Component } from './components/sections/reduce-c02/reduce-c02.component';
+import { HypothesisComponent } from './components/sections/hypothesis/hypothesis.component';
+import { VisionComponent } from './components/sections/vision/vision.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { ClimaFactsComponent } from './components/sections/clima-facts/clima-fac
     GraphComponent,
     HomeComponent,
     TableComponent,
-    ClimaFactsComponent
+    ClimaFactsComponent,
+    ReduceC02Component,
+    HypothesisComponent,
+    VisionComponent
   ],
   imports: [
     BrowserModule,
