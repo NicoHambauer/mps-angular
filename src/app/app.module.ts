@@ -19,9 +19,12 @@ import { SecondSectionComponent } from './components/sections/second-section/sec
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThirdSectionComponent } from './components/sections/third-section/third-section.component';
 import { HomeComponent } from './components/sections/home/home.component';
 import { TableComponent } from './components/table/table.component';
+import { ClimaFactsComponent } from './components/sections/clima-facts/clima-facts.component';
+import { ReduceC02Component } from './components/sections/reduce-c02/reduce-c02.component';
+import { HypothesisComponent } from './components/sections/hypothesis/hypothesis.component';
+import { VisionComponent } from './components/sections/vision/vision.component';
 
 
 @NgModule({
@@ -34,9 +37,12 @@ import { TableComponent } from './components/table/table.component';
     SecondSectionComponent,
     NavbarComponent,
     GraphComponent,
-    ThirdSectionComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    ClimaFactsComponent,
+    ReduceC02Component,
+    HypothesisComponent,
+    VisionComponent
   ],
   imports: [
     BrowserModule,
