@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Deployment
+
+The app is currently deployed on [firebase](https://mps-ang.firebaseapp.com/) for Inspection and Adaption as well as for the final Release for MPS Übung 1.
+
+It can also be found at a [second firebase link](https://mps-ang.web.app/)
