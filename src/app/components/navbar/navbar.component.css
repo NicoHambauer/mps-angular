@@ -7,7 +7,7 @@ nav {
   }
 
 a:hover{
-    background-color: darkgreen;
+    background-color:  rgba(101, 179, 133, 0.40);
     border-radius: 6px;
 }
 
@@ -19,7 +19,7 @@ a:hover{
   margin: 0px 5px 0px 5px;
 }
 .router-link-active {
-  background: rgb(46, 139, 87);
+  background: rgb(46, 139, 87, 0.40);
   border-radius: 6px;
   color: rgb(46, 139, 87);
   font-weight: bold;

@@ -15,7 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
 import { FirstSectionComponent } from './components/sections/first-section/first-section.component';
-import { SecondSectionComponent } from './components/sections/second-section/second-section.component';
+import { TrackerComponent } from './components/sections/tracker/tracker.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +34,7 @@ import { VisionComponent } from './components/sections/vision/vision.component';
     LogoComponent,
     LoginButtonComponent,
     FirstSectionComponent,
-    SecondSectionComponent,
+    TrackerComponent,
     NavbarComponent,
     GraphComponent,
     HomeComponent,
