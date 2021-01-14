@@ -19,11 +19,18 @@ function scrollFunction() {
 
 export class NavbarComponent implements OnInit {
   
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
   constructor(){
 
   }
 
   ngOnInit():void {
+    
     window.addEventListener('wheel', function() {
       /*
       let navbar = document.getElementById('navbar').style;
@@ -35,6 +42,8 @@ export class NavbarComponent implements OnInit {
         navbar.display = "";
       }
       */
+
+      
     });
   }
 }

@@ -10,7 +10,7 @@ import { HypothesisComponent } from '../app/components/sections/hypothesis/hypot
 import { VisionComponent } from '../app/components/sections/vision/vision.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent}, 
+  { path: 'home', component: HomeComponent}, 
   { path: 'navbar', component: NavbarComponent },
   { path: 'first-section', component: FirstSectionComponent},
   { path: 'second-section', component: SecondSectionComponent},
