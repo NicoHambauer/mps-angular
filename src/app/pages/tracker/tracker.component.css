@@ -1,20 +1,17 @@
 #tracker{
     position: relative;
     top: 6.2vh;
+    height: 30vh;
 }
 
 #tab-content {
-    background-color: rgb(233, 232, 232);
     width: 100vw;
-    margin: auto;
-    padding: 5%;
     text-align: center;
-}
-
-#mat-tab-container{
-    height: 30vh;
+    align-items: center;
+    padding: 3vw;
 }
 
 mat-tab-group {
     top: 5vh;
+    
 }
