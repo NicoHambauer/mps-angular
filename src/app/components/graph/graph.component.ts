@@ -92,10 +92,11 @@ export class GraphComponent implements OnInit {
             }
           }]
         },
-        aspectRatio: 2,
+        aspectRatio: 0.7,
         //ignores type safety
         // @ts-ignore
-        onResize: this.setAspectRatio, 
+        //onResize: this.setAspectRatio,
+        maintainAspectRatio: false,
       }
     }); 
   }
@@ -114,8 +115,8 @@ export class GraphComponent implements OnInit {
   }
 
   setAspectRatio(Chart:Chart, newChartsize:ChartSize):void{
-    var ratio = newChartsize.width / 1920;
-    Chart.aspectRatio = 3 * ratio;
+    var ratio = newChartsize.width / (1920 - 500);
+    Chart.aspectRatio = 2 * ratio;
     //console.log(newChartsize)
     //console.log(Chart)
   }
