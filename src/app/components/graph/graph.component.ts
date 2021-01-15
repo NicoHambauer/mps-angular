@@ -114,12 +114,14 @@ export class GraphComponent implements OnInit {
     }
   }
 
+  /* Not needed if maintainAspectRatio stays false
   setAspectRatio(Chart:Chart, newChartsize:ChartSize):void{
     var ratio = newChartsize.width / (1920 - 500);
     Chart.aspectRatio = 2 * ratio;
     //console.log(newChartsize)
     //console.log(Chart)
   }
+  */
 
   // platzhalterfunktionen
   addVerbrauch(index:number, verbrauch:number):void {
