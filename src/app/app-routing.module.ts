@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NavbarComponent } from '../app/components/navbar/navbar.component';
-import { LoginComponent } from './components/sections/login/login.component';
-import { TrackerComponent } from './components/sections/tracker/tracker.component';
-import { HomeComponent } from './components/sections/home/home.component';
-import { ClimaFactsComponent } from '../app/components/sections/clima-facts/clima-facts.component';
-import { ReduceC02Component } from '../app/components/sections/reduce-c02/reduce-c02.component';
-import { HypothesisComponent } from '../app/components/sections/hypothesis/hypothesis.component';
-import { VisionComponent } from '../app/components/sections/vision/vision.component';
+import { LoginComponent } from './pages/login/login.component';
+import { TrackerComponent } from './pages/tracker/tracker.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
+import { ReduceC02Component } from './pages/reduce-c02/reduce-c02.component';
+import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
+import { VisionComponent } from './pages/vision/vision.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent}, 

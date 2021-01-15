@@ -1,3 +1,8 @@
+#tracker{
+    position: relative;
+    top: 6.2vh;
+}
+
 #tab-content {
     background-color: rgb(233, 232, 232);
     width: 100vw;
