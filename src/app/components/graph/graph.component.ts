@@ -115,9 +115,9 @@ export class GraphComponent implements OnInit {
 
   setAspectRatio(Chart:Chart, newChartsize:ChartSize):void{
     var ratio = newChartsize.width / 1920;
-    if(this.CO2Tracker != undefined) this.CO2Tracker.options.aspectRatio = 1.2;
-    console.log(newChartsize)
-    console.log(Chart)
+    Chart.aspectRatio = 3 * ratio;
+    //console.log(newChartsize)
+    //console.log(Chart)
   }
 
   // platzhalterfunktionen
