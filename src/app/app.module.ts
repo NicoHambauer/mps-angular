@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
-import { FirstSectionComponent } from './components/sections/first-section/first-section.component';
+import { LoginComponent } from './components/sections/login/login.component';
 import { TrackerComponent } from './components/sections/tracker/tracker.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
@@ -33,7 +33,7 @@ import { VisionComponent } from './components/sections/vision/vision.component';
     HeaderComponent,
     LogoComponent,
     LoginButtonComponent,
-    FirstSectionComponent,
+    LoginComponent,
     TrackerComponent,
     NavbarComponent,
     GraphComponent,

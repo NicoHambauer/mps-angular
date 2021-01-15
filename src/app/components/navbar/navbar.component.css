@@ -1,6 +1,6 @@
 nav {
     position: fixed;
-    top: 0px; /*eigentlich -50px, damit nicht zu sehen */
+    top: 0px;
     width: 100%;
     transition: top 0.3s;
     z-index: 2; 
