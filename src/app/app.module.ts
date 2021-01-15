@@ -14,17 +14,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
-import { FirstSectionComponent } from './components/sections/first-section/first-section.component';
-import { SecondSectionComponent } from './components/sections/second-section/second-section.component';
+import { LoginComponent } from './pages/login/login.component';
+import { TrackerComponent } from './pages/tracker/tracker.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/sections/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { TableComponent } from './components/table/table.component';
-import { ClimaFactsComponent } from './components/sections/clima-facts/clima-facts.component';
-import { ReduceC02Component } from './components/sections/reduce-c02/reduce-c02.component';
-import { HypothesisComponent } from './components/sections/hypothesis/hypothesis.component';
-import { VisionComponent } from './components/sections/vision/vision.component';
+import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
+import { ReduceC02Component } from './pages/reduce-c02/reduce-c02.component';
+import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
+import { VisionComponent } from './pages/vision/vision.component';
 
 
 @NgModule({
@@ -33,8 +33,8 @@ import { VisionComponent } from './components/sections/vision/vision.component';
     HeaderComponent,
     LogoComponent,
     LoginButtonComponent,
-    FirstSectionComponent,
-    SecondSectionComponent,
+    LoginComponent,
+    TrackerComponent,
     NavbarComponent,
     GraphComponent,
     HomeComponent,

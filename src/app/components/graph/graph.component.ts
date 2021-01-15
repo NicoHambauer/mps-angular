@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'chart.js';
+import { Chart, ChartSize } from 'chart.js';
 
 @Component({
   selector: 'app-graph',
@@ -11,6 +11,7 @@ export class GraphComponent implements OnInit {
   timeInterval:string[];
   overshootGoal:number;
   color:string[];
+  CO2Tracker: any;
 
   constructor() {
     this.meinVerbrauch = []
@@ -40,7 +41,7 @@ export class GraphComponent implements OnInit {
     //nicht mehr benötigt, da npm install chart.js ausgeführt wurde
     //<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
     
-    var CO2Tracker = new Chart('myChart', {
+     this.CO2Tracker = new Chart('myChart', {
       type: 'bar',
       data: {
         labels: this.timeInterval,
@@ -69,7 +70,7 @@ export class GraphComponent implements OnInit {
         },
         layout: {
           padding: {
-            left: 50,
+            left: 0,
             right: 0,
             bottom: 0,
             top: 0
@@ -90,7 +91,12 @@ export class GraphComponent implements OnInit {
               beginAtZero: true,
             }
           }]
-        }
+        },
+        aspectRatio: 0.7,
+        //ignores type safety
+        // @ts-ignore
+        //onResize: this.setAspectRatio,
+        maintainAspectRatio: false,
       }
     }); 
   }
@@ -107,6 +113,15 @@ export class GraphComponent implements OnInit {
       }
     }
   }
+
+  /* Not needed if maintainAspectRatio stays false
+  setAspectRatio(Chart:Chart, newChartsize:ChartSize):void{
+    var ratio = newChartsize.width / (1920 - 500);
+    Chart.aspectRatio = 2 * ratio;
+    //console.log(newChartsize)
+    //console.log(Chart)
+  }
+  */
 
   // platzhalterfunktionen
   addVerbrauch(index:number, verbrauch:number):void {

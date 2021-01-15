@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstSectionComponent } from './first-section.component';
+import { TrackerComponent } from './tracker.component';
 
-describe('FirstSectionComponent', () => {
-  let component: FirstSectionComponent;
-  let fixture: ComponentFixture<FirstSectionComponent>;
+describe('SecondSectionComponent', () => {
+  let component: TrackerComponent;
+  let fixture: ComponentFixture<TrackerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FirstSectionComponent ]
+      declarations: [ TrackerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FirstSectionComponent);
+    fixture = TestBed.createComponent(TrackerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

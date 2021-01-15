@@ -1,11 +1,29 @@
 nav {
     position: fixed;
-    top: 0px; /*eigentlich -50px, damit nicht zu sehen */
+    top: 0px;
     width: 100%;
     transition: top 0.3s;
     z-index: 2; 
   }
 
 a:hover{
-    background-color: lightgray;
+    background-color:  rgba(101, 179, 133, 0.40);
+    border-radius: 6px;
+}
+
+.nav-link {
+  font-weight: bolder;
+  padding: 6px 24px;
+  text-decoration: none;
+  outline: 0;
+  margin: 0px 5px 0px 5px;
+}
+.router-link-active {
+  background: rgb(46, 139, 87, 0.40);
+  border-radius: 6px;
+  color: rgb(46, 139, 87);
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  outline: 0;
 }

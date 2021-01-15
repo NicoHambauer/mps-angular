@@ -1,0 +1,17 @@
+#tracker{
+    position: relative;
+    top: 6.2vh;
+    height: 30vh;
+}
+
+#tab-content {
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    padding: 5vw;
+}
+
+mat-tab-group {
+    top: 5vh;
+    
+}
