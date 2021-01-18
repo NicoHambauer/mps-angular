@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReduceC02Component } from './reduce-c02.component';
+import { ReduceFootprintComponent } from './reduce-footprint.component';
 
-describe('ReduceC02Component', () => {
-  let component: ReduceC02Component;
-  let fixture: ComponentFixture<ReduceC02Component>;
+describe('ReduceFootprintComponent', () => {
+  let component: ReduceFootprintComponent;
+  let fixture: ComponentFixture<ReduceFootprintComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReduceC02Component ]
+      declarations: [ ReduceFootprintComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReduceC02Component);
+    fixture = TestBed.createComponent(ReduceFootprintComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
