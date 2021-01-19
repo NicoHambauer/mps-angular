@@ -25,6 +25,7 @@ import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
 import { ReduceFootprintComponent } from './pages/reduce-footprint/reduce-footprint.component';
 import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { VisionComponent } from './pages/vision/vision.component';
     ClimaFactsComponent,
     ReduceFootprintComponent,
     HypothesisComponent,
-    VisionComponent
+    VisionComponent,
+    AddButtonComponent
   ],
   imports: [
     BrowserModule,
