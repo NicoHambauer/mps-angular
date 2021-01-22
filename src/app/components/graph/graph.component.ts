@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartSize } from 'chart.js';
+import { ItemComponent } from '../item/item.component';
 
 @Component({
   selector: 'app-graph',
@@ -13,6 +14,8 @@ export class GraphComponent implements OnInit {
   color:string[];
   CO2Tracker: any;
 
+  Co2Items: ItemComponent[];
+
   constructor() {
     this.meinVerbrauch = []
     //testWerte
@@ -25,6 +28,8 @@ export class GraphComponent implements OnInit {
     this.meinVerbrauch.push(210);
     
     this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+
+    this.Co2Items = []
 
     this.overshootGoal = 200
     this.color = []
