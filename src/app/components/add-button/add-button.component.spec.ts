@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReduceC02Component } from './reduce-c02.component';
+import { AddButtonComponent } from './add-button.component';
 
-describe('ReduceC02Component', () => {
-  let component: ReduceC02Component;
-  let fixture: ComponentFixture<ReduceC02Component>;
+describe('AddButtonComponent', () => {
+  let component: AddButtonComponent;
+  let fixture: ComponentFixture<AddButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReduceC02Component ]
+      declarations: [ AddButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReduceC02Component);
+    fixture = TestBed.createComponent(AddButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

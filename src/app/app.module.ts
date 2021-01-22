@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { TableComponent } from './components/table/table.component';
 import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
-import { ReduceC02Component } from './pages/reduce-c02/reduce-c02.component';
+import { ReduceFootprintComponent } from './pages/reduce-footprint/reduce-footprint.component';
 import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import { AddItemButtonComponent } from './components/add-item-button/add-item-button.component';
@@ -43,13 +43,12 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     HomeComponent,
     TableComponent,
     ClimaFactsComponent,
-    ReduceC02Component,
+    ReduceFootprintComponent,
     HypothesisComponent,
     VisionComponent,
     AddItemButtonComponent,
     ItemComponent,
-    
-    
+
   ],
   imports: [
     BrowserModule,
