@@ -8,6 +8,8 @@ import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
 import { ReduceC02Component } from './pages/reduce-c02/reduce-c02.component';
 import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
+//import {TextFieldModule} from '@angular/cdk/text-field';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent}, 
