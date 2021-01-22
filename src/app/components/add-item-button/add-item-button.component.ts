@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {GraphComponent} from '../graph/graph.component'; 
 
 
 @Component({
@@ -17,7 +18,10 @@ export class AddItemButtonComponent implements OnInit {
 
   addItem(): void {
     var textbox = document.getElementById("itemInput")!.nodeValue;
+   
   }
+
+  
 
 }
 
