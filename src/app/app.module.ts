@@ -25,7 +25,9 @@ import { ClimaFactsComponent } from './pages/clima-facts/clima-facts.component';
 import { ReduceFootprintComponent } from './pages/reduce-footprint/reduce-footprint.component';
 import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
-import { AddButtonComponent } from './components/add-button/add-button.component';
+import { AddItemButtonComponent } from './components/add-item-button/add-item-button.component';
+import { ItemComponent } from './components/item/item.component';
+import {TextFieldModule} from '@angular/cdk/text-field'; 
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { AddButtonComponent } from './components/add-button/add-button.component
     ReduceFootprintComponent,
     HypothesisComponent,
     VisionComponent,
-    AddButtonComponent
+    AddItemButtonComponent,
+    ItemComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { AddButtonComponent } from './components/add-button/add-button.component
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    TextFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
