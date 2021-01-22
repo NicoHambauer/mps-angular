@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TextFieldModule} from '@angular/cdk/text-field';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
-import {GraphComponent} from '../graph/graph.component'; 
+import {ItemserviceService} from 'src/app/services/itemservice.service'
+import { ItemComponent } from '../item/item.component';
 
 
 @Component({
@@ -11,9 +10,14 @@ import {GraphComponent} from '../graph/graph.component';
 })
 export class AddItemButtonComponent implements OnInit {
 
-  constructor() { }
+   //message: ItemComponent;
+
+  constructor(public itemservice: ItemserviceService) {
+    //this.itemservice.currentMessage.subscribe(message => this.message = message)
+   }
 
   ngOnInit(): void {
+    //this.itemservice.currentMessage.subscribe(message => this.message = message);
   }
 
   addItem(): void {

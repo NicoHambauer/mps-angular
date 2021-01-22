@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ItemserviceService} from 'src/app/services/itemservice.service'
+import { ItemComponent } from '../item/item.component';
+
 
 @Component({
   selector: 'app-table',
@@ -7,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  //message: ItemComponent;
+
   tableData: any[];
   //sortDirection:boolean;
 
-  constructor() {
+  constructor(public itemservice: ItemserviceService) {
+
+    //this.itemservice.currentMessage.subscribe(message => this.message = message)
+
     this.tableData = [
       { item: 'Autofahrt', verbrauch: 100, datum: 'Mo' },
       { item: 'Heizung', verbrauch: 20, datum: 'Mo' },
@@ -20,6 +28,9 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    //this.itemservice.currentMessage.subscribe(message => this.message = message);
+
 
     /*function sortColumn(columnName) {
         const dataType = typeof tableData[0][columnName];

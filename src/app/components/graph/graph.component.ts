@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartSize } from 'chart.js';
 import { ItemComponent } from '../item/item.component';
+import {ItemserviceService} from 'src/app/services/itemservice.service'
+
+
 
 @Component({
   selector: 'app-graph',
@@ -8,6 +11,9 @@ import { ItemComponent } from '../item/item.component';
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent implements OnInit {
+
+  //message: ItemComponent;
+
   meinVerbrauch:number[];
   timeInterval:string[];
   overshootGoal:number;
@@ -16,7 +22,13 @@ export class GraphComponent implements OnInit {
 
   Co2Items: ItemComponent[];
 
-  constructor() {
+  
+
+  constructor(public itemservice: ItemserviceService) {
+
+    //this.itemservice.currentMessage.subscribe(message => this.message = message)
+
+
     this.meinVerbrauch = []
     //testWerte
     this.meinVerbrauch.push(130);
@@ -45,6 +57,9 @@ export class GraphComponent implements OnInit {
   
     //nicht mehr benötigt, da npm install chart.js ausgeführt wurde
     //<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
+
+
+    //this.itemservice.currentMessage.subscribe(message => this.message = message);
     
      this.CO2Tracker = new Chart('myChart', {
       type: 'bar',
