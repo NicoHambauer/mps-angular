@@ -50,7 +50,7 @@ export class GraphComponent implements OnInit {
      //Global Options
      Chart.defaults.global.defaultFontFamily = 'Arial';
      Chart.defaults.global.defaultFontSize = 18;
-     Chart.defaults.global.defaultFontColor = 'grey';
+     Chart.defaults.global.defaultFontColor = 'black';
   }
 
   ngOnInit(): void {
@@ -71,7 +71,7 @@ export class GraphComponent implements OnInit {
             backgroundColor: this.color,
             borderColor: 'black',
             borderWidth: 1,
-            hoverBorderWidth: 3,
+            hoverBorderWidth: 2,
             hoverBorderColor: 'black',
         }]
       },
@@ -79,13 +79,13 @@ export class GraphComponent implements OnInit {
         title: {
           display: true,
           text: 'Deine CO2 Bilanz',
-          fontSize: 25
+          fontSize: 25,
         },
         legend: {
           display: false,
           position: 'right',
           labels: {
-            fontColor: 'grey'
+            fontColor: 'black'
           }
         },
         layout: {
