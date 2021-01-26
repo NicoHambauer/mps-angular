@@ -11,12 +11,14 @@ import { ItemserviceService } from 'src/app/services/itemservice.service'
 export class GraphComponent implements OnInit {
 
   //message: ItemComponent;
+  
+  //Bar Chart
+  CO2Tracker: any;
 
   meinVerbrauch:number[] = [];
   timeInterval:string[];
   overshootGoal:number = 130;
   color:string[] = [];
-  CO2Tracker: any;
 
   constructor(public itemservice: ItemserviceService) {
 
@@ -107,6 +109,7 @@ export class GraphComponent implements OnInit {
     this.meinVerbrauch[dayIndex] += verbrauch
   }
 
+  /*
   substractVerbrauch(dayIndex:number, verbrauch:number) {
     this.meinVerbrauch[dayIndex] -= verbrauch
     //damit Verbrauch nicht negativ wird
@@ -114,6 +117,7 @@ export class GraphComponent implements OnInit {
       this.meinVerbrauch[dayIndex] = 0
     }
   }
+  */
 
   addDay():void {
     this.meinVerbrauch.push(0)

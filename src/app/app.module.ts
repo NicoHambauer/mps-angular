@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
 
 //Bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -59,6 +60,7 @@ import { FootprintItemsComponent } from './components/footprint-items/footprint-
     BrowserAnimationsModule,
     MatTabsModule,
     TextFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

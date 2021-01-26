@@ -52,7 +52,13 @@ export class FootprintItemsComponent implements OnInit {
 
   }
 
-  
+
+  //TODO 
+  static addToItem(index:number, value:number){
+    console.log(FootprintItemsComponent.items[index])
+    FootprintItemsComponent.items[index].co2value += value;
+    console.log(FootprintItemsComponent.items[index])
+  }
 
   static getItems(){
     return FootprintItemsComponent.items;
