@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemserviceService} from 'src/app/services/itemservice.service'
-
+import { FootprintItemsComponent } from '../footprint-items/footprint-items.component'
 
 @Component({
   selector: 'app-table',
@@ -11,18 +11,15 @@ export class TableComponent implements OnInit {
 
   //message: ItemComponent;
 
-  tableData: any[];
+  tableData: any[] = [];
   //sortDirection:boolean;
 
   constructor(public itemservice: ItemserviceService) {
 
     //this.itemservice.currentMessage.subscribe(message => this.message = message)
-
-    this.tableData = [
-      { item: 'Autofahrt', verbrauch: 100, datum: 'Mo' },
-      { item: 'Heizung', verbrauch: 20, datum: 'Mo' },
-      { item: 'Gas', verbrauch: 50, datum: 'Di' }
-    ];
+    FootprintItemsComponent.getItems().forEach( item => {
+      this.tableData.push({ item: item.name, verbrauch: item.co2value })      
+    });
     //this.sortDirection = false;
   }
 
