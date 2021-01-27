@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartSize } from 'chart.js';
-import { ItemComponent } from '../item/item.component';
-import {ItemserviceService} from 'src/app/services/itemservice.service'
-
-
+import { FootprintItemsComponent } from '../footprint-items/footprint-items.component'
+import { ItemserviceService } from 'src/app/services/itemservice.service'
 
 @Component({
   selector: 'app-graph',
@@ -13,39 +11,23 @@ import {ItemserviceService} from 'src/app/services/itemservice.service'
 export class GraphComponent implements OnInit {
 
   //message: ItemComponent;
-
-  meinVerbrauch:number[];
-  timeInterval:string[];
-  overshootGoal:number;
-  color:string[];
+  
+  //Bar Chart
   CO2Tracker: any;
 
-  Co2Items: ItemComponent[];
-
-  
+  meinVerbrauch:number[] = [];
+  timeInterval:string[];
+  overshootGoal:number = 130;
+  color:string[] = [];
 
   constructor(public itemservice: ItemserviceService) {
 
     //this.itemservice.currentMessage.subscribe(message => this.message = message)
 
-
-    this.meinVerbrauch = []
-    //testWerte
-    this.meinVerbrauch.push(130);
-    this.meinVerbrauch.push(150);
-    this.meinVerbrauch.push(210);
-    this.meinVerbrauch.push(150);
-    this.meinVerbrauch.push(150);
-    this.meinVerbrauch.push(150);
-    this.meinVerbrauch.push(210);
-    
-    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
-
-    this.Co2Items = []
-
-    this.overshootGoal = 200
-    this.color = []
-    this.getColor();
+    //this.meinVerbrauch = [130, 150, 210, 90, 160, 150, 210]
+    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+    this.initItems();
+    this.setBarsColor();
 
      //Global Options
      Chart.defaults.global.defaultFontFamily = 'Arial';
@@ -54,11 +36,6 @@ export class GraphComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  
-    //nicht mehr benötigt, da npm install chart.js ausgeführt wurde
-    //<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js "></script>
-
-
     //this.itemservice.currentMessage.subscribe(message => this.message = message);
     
      this.CO2Tracker = new Chart('myChart', {
@@ -121,8 +98,32 @@ export class GraphComponent implements OnInit {
     }); 
   }
 
-  getColor():void {
-    
+  initItems():void {
+    FootprintItemsComponent.getItems().forEach( item => {
+      this.meinVerbrauch.push(item.co2value)
+    })
+  }
+
+  // platzhalterfunktionen
+  addVerbrauch(dayIndex:number, verbrauch:number):void {
+    this.meinVerbrauch[dayIndex] += verbrauch
+  }
+
+  /*
+  substractVerbrauch(dayIndex:number, verbrauch:number) {
+    this.meinVerbrauch[dayIndex] -= verbrauch
+    //damit Verbrauch nicht negativ wird
+    if (this.meinVerbrauch[dayIndex] < 0) {
+      this.meinVerbrauch[dayIndex] = 0
+    }
+  }
+  */
+
+  addDay():void {
+    this.meinVerbrauch.push(0)
+  }
+
+  setBarsColor():void {
     //ordnet je nach Verbrauch dem Balken rot oder grün als Farbe zu
     var i:number
     for (i = 0; i < this.meinVerbrauch.length; i++) {
@@ -131,32 +132,6 @@ export class GraphComponent implements OnInit {
       } else {
         this.color.push('green')
       }
-    }
-  }
-
-  /* Not needed if maintainAspectRatio stays false
-  setAspectRatio(Chart:Chart, newChartsize:ChartSize):void{
-    var ratio = newChartsize.width / (1920 - 500);
-    Chart.aspectRatio = 2 * ratio;
-    //console.log(newChartsize)
-    //console.log(Chart)
-  }
-  */
-
-  // platzhalterfunktionen
-  addVerbrauch(index:number, verbrauch:number):void {
-    this.meinVerbrauch[index] += verbrauch
-  }
-
-  addDay():void {
-    this.meinVerbrauch.push(0)
-  }
-
-  substractVerbrauch(index:number, verbrauch:number) {
-    this.meinVerbrauch[index] -= verbrauch
-    //damit Verbrauch nicht negativ wird
-    if (this.meinVerbrauch[index] < 0) {
-      this.meinVerbrauch[index] = 0
     }
   }
 

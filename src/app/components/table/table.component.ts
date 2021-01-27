@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemserviceService} from 'src/app/services/itemservice.service'
-import { ItemComponent } from '../item/item.component';
-
+import { FootprintItemsComponent } from '../footprint-items/footprint-items.component'
 
 @Component({
   selector: 'app-table',
@@ -12,46 +11,44 @@ export class TableComponent implements OnInit {
 
   //message: ItemComponent;
 
-  tableData: any[];
-  //sortDirection:boolean;
+  tableData: any[] = [];
 
   constructor(public itemservice: ItemserviceService) {
 
     //this.itemservice.currentMessage.subscribe(message => this.message = message)
 
-    this.tableData = [
-      { item: 'Autofahrt', verbrauch: 100, datum: 'Mo' },
-      { item: 'Heizung', verbrauch: 20, datum: 'Mo' },
-      { item: 'Gas', verbrauch: 50, datum: 'Di' }
-    ];
-    //this.sortDirection = false;
+    FootprintItemsComponent.getItems().forEach( item => {
+      this.tableData.push({ item: item.name, verbrauch: item.co2value })      
+    });
+
   }
 
   ngOnInit(): void {
 
     //this.itemservice.currentMessage.subscribe(message => this.message = message);
 
+  }
 
-    /*function sortColumn(columnName) {
-        const dataType = typeof tableData[0][columnName];
-        sortDirection = !sortDirection;
+  sortNumberColumn(sort:any, columnName:string) {
+    this.tableData = this.tableData.sort((p1, p2) => {
+        return sort ? p1[columnName] - p2[columnName] : p2[columnName] - p1[columnName]
+    });
+  }
 
-        switch(dataType) {
-            case 'number':
-            sortNumberColumn(sortDirection, columnName);
-            break;
-        }
-
-        loadTableData(tableData);
+  /*
+  sortColumn(columnName: string) {
+    const dataType = typeof this.tableData[0][columnName];
+    sortDirection = !sortDirection;
+    
+    switch(dataType) {
+      case 'number':
+        sortNumberColumn(sortDirection, columnName);
+        break;
+      }
+      loadTableData(tableData);
     }
 
-    function sortNumberColumn(sort, columnName) {
-        tableData = tableData.sort((p1, p2) => {
-            return sort ? p1[ColumnName] - p2[columnName] : p2[ColumnName] - p1[columnName]
-        });
-    } */
-
-
   }
+  */
 
 }

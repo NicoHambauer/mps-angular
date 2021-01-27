@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
 
 //Bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -26,8 +27,8 @@ import { ReduceFootprintComponent } from './pages/reduce-footprint/reduce-footpr
 import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import { AddItemButtonComponent } from './components/add-item-button/add-item-button.component';
-import { ItemComponent } from './components/item/item.component';
-import {TextFieldModule} from '@angular/cdk/text-field'; 
+import {TextFieldModule} from '@angular/cdk/text-field';
+import { FootprintItemsComponent } from './components/footprint-items/footprint-items.component'; 
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     HypothesisComponent,
     VisionComponent,
     AddItemButtonComponent,
-    ItemComponent,
+    FootprintItemsComponent,
 
   ],
   imports: [
@@ -59,6 +60,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     BrowserAnimationsModule,
     MatTabsModule,
     TextFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
