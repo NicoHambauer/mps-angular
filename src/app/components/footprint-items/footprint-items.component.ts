@@ -39,11 +39,6 @@ export class FootprintItemsComponent implements OnInit {
       name: 'Tomaten',
       co2value: 20,
     },
-    {
-      id: 7,
-      name: 'Milch',
-      co2value: 20,
-    },
   ];
 
   constructor() { }

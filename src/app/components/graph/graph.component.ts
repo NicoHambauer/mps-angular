@@ -25,7 +25,7 @@ export class GraphComponent implements OnInit {
     //this.itemservice.currentMessage.subscribe(message => this.message = message)
 
     //this.meinVerbrauch = [130, 150, 210, 90, 160, 150, 210]
-    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
     this.initItems();
     this.setBarsColor();
 

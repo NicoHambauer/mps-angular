@@ -27,7 +27,9 @@ export class AddItemButtonComponent implements OnInit {
     var textbox = this.co2valueToAdd
     if(textbox != null){
       var addValue = parseInt(textbox);
-      FootprintItemsComponent.addToItem(0, addValue)
+      if(addValue != NaN){
+        FootprintItemsComponent.addToItem(0, addValue)
+      }
     }
   }
 
