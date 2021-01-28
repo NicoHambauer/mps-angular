@@ -101,10 +101,6 @@ export class GraphComponent implements OnInit {
     }); 
   }
 
-  //TODO  WORK HERE
-  static addToItem(index:number, value:number){
-  }
-
   // platzhalterfunktionen
   addVerbrauch(dayIndex:number, verbrauch:number):void {
     this.meinVerbrauch[dayIndex] += verbrauch
