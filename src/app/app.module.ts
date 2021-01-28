@@ -28,7 +28,6 @@ import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import { AddItemButtonComponent } from './components/add-item-button/add-item-button.component';
 import {TextFieldModule} from '@angular/cdk/text-field';
-import { FootprintItemsComponent } from './components/footprint-items/footprint-items.component'; 
 
 
 @NgModule({
@@ -48,8 +47,6 @@ import { FootprintItemsComponent } from './components/footprint-items/footprint-
     HypothesisComponent,
     VisionComponent,
     AddItemButtonComponent,
-    FootprintItemsComponent,
-
   ],
   imports: [
     BrowserModule,

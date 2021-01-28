@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartSize } from 'chart.js';
-import { FootprintItemsComponent } from '../footprint-items/footprint-items.component'
 import { ItemserviceService } from 'src/app/services/itemservice.service'
+import { Item } from '../item/Item';
 
 @Component({
   selector: 'app-graph',
@@ -10,32 +10,35 @@ import { ItemserviceService } from 'src/app/services/itemservice.service'
 })
 export class GraphComponent implements OnInit {
 
-  //message: ItemComponent;
-  
   //Bar Chart
   CO2Tracker: any;
-
-  meinVerbrauch:number[] = [];
-  timeInterval:string[];
+  //personal overshoot day settings
   overshootGoal:number = 130;
   color:string[] = [];
 
+  //chart data
+  meinVerbrauch:number[] = [];
+  timeInterval:string[] = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+
+  items:Item[] = [];
+
   constructor(public itemservice: ItemserviceService) {
+    //this.itemservice.getItems().subscribe(items => this.items = items)
 
-    //this.itemservice.currentMessage.subscribe(message => this.message = message)
-
-    //this.meinVerbrauch = [130, 150, 210, 90, 160, 150, 210]
-    this.timeInterval = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
-    this.initItems();
-    this.setBarsColor();
-
-     //Global Options
-     Chart.defaults.global.defaultFontFamily = 'Arial';
-     Chart.defaults.global.defaultFontSize = 18;
-     Chart.defaults.global.defaultFontColor = 'black';
+    //Global Options
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = 'black';
   }
 
   ngOnInit(): void {
+    this.items = this.itemservice.getItems();
+    this.items.forEach(item => {
+      this.meinVerbrauch.push(item.co2value);
+    })
+
+    this.setBarsColor();
+
     //this.itemservice.currentMessage.subscribe(message => this.message = message);
     
      this.CO2Tracker = new Chart('myChart', {
@@ -98,10 +101,8 @@ export class GraphComponent implements OnInit {
     }); 
   }
 
-  initItems():void {
-    FootprintItemsComponent.getItems().forEach( item => {
-      this.meinVerbrauch.push(item.co2value)
-    })
+  //TODO  WORK HERE
+  static addToItem(index:number, value:number){
   }
 
   // platzhalterfunktionen
