@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { FormsModule } from '@angular/forms';
 
 //Bootstrap
@@ -28,7 +29,6 @@ import { HypothesisComponent } from './pages/hypothesis/hypothesis.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import { AddItemButtonComponent } from './components/add-item-button/add-item-button.component';
 import {TextFieldModule} from '@angular/cdk/text-field';
-import { FootprintItemsComponent } from './components/footprint-items/footprint-items.component'; 
 
 
 @NgModule({
@@ -48,8 +48,6 @@ import { FootprintItemsComponent } from './components/footprint-items/footprint-
     HypothesisComponent,
     VisionComponent,
     AddItemButtonComponent,
-    FootprintItemsComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -59,6 +57,7 @@ import { FootprintItemsComponent } from './components/footprint-items/footprint-
     ModalModule.forRoot(),
     BrowserAnimationsModule,
     MatTabsModule,
+    MatProgressBarModule,
     TextFieldModule,
     FormsModule,
   ],

@@ -26,6 +26,14 @@
     padding: 5vw;
 }
 
+#overshoot-progressbar {
+    margin-bottom: 20px;
+}
+
+#overshoot-progressbar-list{
+    margin-bottom: 20px;
+}
+
 mat-tab-group {
     top: 5vh;
     

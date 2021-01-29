@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemserviceService} from 'src/app/services/itemservice.service'
-import { FootprintItemsComponent } from '../footprint-items/footprint-items.component'
 
 
 @Component({
@@ -28,7 +27,7 @@ export class AddItemButtonComponent implements OnInit {
     if(textbox != null){
       var addValue = parseInt(textbox);
       if(addValue != NaN){
-        FootprintItemsComponent.addToItem(0, addValue)
+        this.itemservice.setItem(4, addValue);
       }
     }
   }
