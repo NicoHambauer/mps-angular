@@ -26,7 +26,7 @@ export class TableComponent implements OnInit {
     //this.itemservice.currentMessage.subscribe(message => this.message = message);
     this.items = this.itemservice.getItems();
     this.items.forEach(item => {
-      this.tableData.push({item:item.name, verbrauch:item.co2value});
+      this.tableData.push({item:item.name, verbrauch:item.co2value, datum:item.date});
     })
 
   }

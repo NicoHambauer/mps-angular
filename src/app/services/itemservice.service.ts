@@ -18,36 +18,43 @@ export class ItemserviceService {
       id: 1,
       name: 'Avocado',
       co2value: 6,
+      date: 'Mo'
     },
     {
       id: 2,
       name: 'Banane',
       co2value: 10,
+      date: 'Di'
     },
     {
       id: 3,
       name: 'Autofahrt',
       co2value: 15,
+      date: 'Mi'
     },
     {
       id: 4,
-      name: 'Tomaten',
-      co2value: 3,
+      name: 'Heizung',
+      co2value: 20,
+      date: 'Do'
     },
     {
       id: 5,
       name: 'GasHerd',
       co2value: 4,
+      date: 'Fr'
     },
     {
       id: 6,
-      name: 'Heizung',
-      co2value: 20,
+      name: '',
+      co2value: 0,
+      date: 'Sa'
     },
     {
       id: 7,
-      name: 'Birnen',
-      co2value: 4,
+      name: '',
+      co2value: 0,
+      date: 'So'
     },
   ]
 
