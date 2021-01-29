@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ItemserviceService } from '../../services/itemservice.service'
+
 
 @Component({
   selector: 'app-tracker',
@@ -8,7 +10,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class TrackerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public itemservice: ItemserviceService) { }
 
   ngOnInit(): void {
   }

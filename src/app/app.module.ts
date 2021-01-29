@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { FormsModule } from '@angular/forms';
 
 //Bootstrap
@@ -56,6 +57,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     ModalModule.forRoot(),
     BrowserAnimationsModule,
     MatTabsModule,
+    MatProgressBarModule,
     TextFieldModule,
     FormsModule,
   ],

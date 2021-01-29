@@ -4,6 +4,12 @@
     <mat-tab label="Graph">
       <ng-template matTabContent>
         <div id="tab-content">
+
+          <div id="overshoot-progressbar">
+            <p>Dein persönlicher Overshoot Day ist am {{ this.itemservice.getWeeklyOvershootDay()}}</p>
+            <mat-progress-bar  mode="determinate" value="{{this.itemservice.getPersonal_overshoot_day_percentage()}}"></mat-progress-bar>
+
+          </div>
           
           <app-graph></app-graph>
           
@@ -16,6 +22,12 @@
     
     <mat-tab label="Liste">
       <div id="tab-content">
+
+        <div id="overshoot-progressbar-list">
+          <p>Dein persönlicher Overshoot Day ist am {{ this.itemservice.getWeeklyOvershootDay()}}</p>
+          <mat-progress-bar  mode="determinate" value="{{this.itemservice.getPersonal_overshoot_day_percentage()}}"></mat-progress-bar>
+
+        </div>
 
         <app-table></app-table>
 

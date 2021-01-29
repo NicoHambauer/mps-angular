@@ -27,7 +27,7 @@ export class AddItemButtonComponent implements OnInit {
     if(textbox != null){
       var addValue = parseInt(textbox);
       if(addValue != NaN){
-        this.itemservice.setItem(0, addValue);
+        this.itemservice.setItem(4, addValue);
       }
     }
   }

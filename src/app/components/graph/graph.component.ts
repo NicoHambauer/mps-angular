@@ -13,12 +13,12 @@ export class GraphComponent implements OnInit {
   //Bar Chart
   CO2Tracker: any;
   //personal overshoot day settings
-  overshootGoal:number = 130;
+  overshootGoal:number = (2000/365);
   color:string[] = [];
 
   //chart data
   meinVerbrauch:number[] = [];
-  timeInterval:string[] = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+  timeInterval:string[] = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
   items:Item[] = [];
 
