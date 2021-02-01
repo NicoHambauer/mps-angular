@@ -5,4 +5,6 @@ export class Item {
     name:string;
     //@ts-ignore
     co2value:number;
+    //@ts-ignore
+    date:string;
 }
