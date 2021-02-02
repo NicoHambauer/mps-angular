@@ -2,4 +2,12 @@
     min-height: 100vh;
     background-image: url('../../../assets/forest-blurred.jpeg');
     background-size: cover;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0px;
+    color: white;
 }
+ul{
+    list-style-type: circle;
+  }
