@@ -31,6 +31,14 @@ import { AddItemButtonComponent } from './components/add-item-button/add-item-bu
 import {TextFieldModule} from '@angular/cdk/text-field';
 
 
+
+
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// For MDB Angular Free
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +68,9 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatProgressBarModule,
     TextFieldModule,
     FormsModule,
+    MDBBootstrapModule.forRoot(),
+    CarouselModule,
+    WavesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
